@@ -66,7 +66,12 @@ export class CalculateComponent implements OnInit {
       }
       this.numbers.push(number)
     }
-    this.twoChartsView(this.numbers, [])
+    if (!this.overlay){
+      this.twoChartsView(this.numbers, [])
+    } else {
+      this.twoChartsView(this.numbers, this.longest)
+    }
+
   }
   // can also be implemented recursively
   findLongest(number) {
