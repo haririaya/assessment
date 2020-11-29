@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div> Use slider to pick a number between 1 and 1 million and find its collatz sequence or input it by hand
+                next to the slider</div>
+            <!-- <mat-label>Overlay Longest Chain</mat-label>
+                <mat-checkbox (change) = "applyOverlay($event)" [(ngModel)]="overlay" name= "overlay">Overlay Longest Chain</mat-checkbox> -->
+            <input type="checkbox" name="overlay" value="overlay" (change)="applyOverlay($event)">
+            <label for="overlay" class = "pl-2"> Overlay Longest Chain</label>
+            <div class="row">
+                <mat-slider class="slider col-8 ml-3" [value]="sliderValue" (change)="valueChange($event)" min="1"
+                    max="1000000">
+                </mat-slider>
+
+                <mat-label class="col-1">Input Number</mat-label>
+                <input class="col-2 border-radius" type="number" min="1" max="1000000" [value]="sliderValue"
+                    (change)="valueChange($event)" [(ngModel)]="sliderValue">
+                <div class="col-1 inline-block"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="separator-30"></div>
+    <div class="row">
+        <div class="col-1 inline-block"></div>
+        <div class="col-10 inline-block">
+            <div id="chartContainer" class="chart"></div>
+        </div>
+        <div class="col-1 inline-block"></div>
+    </div>
+</div>

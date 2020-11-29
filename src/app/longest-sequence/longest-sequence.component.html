@@ -1,0 +1,67 @@
+<mat-toolbar class="white">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Collatz Sequence</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a (click)="sidenav.toggle()" (click)="choose(0)" mat-list-item>Homepage </a>
+      <a (click)="sidenav.toggle()" (click)="choose(1)" mat-list-item>Brute Force</a>
+      <a (click)="sidenav.toggle()" (click)="choose(2)" mat-list-item>Memoization</a>
+      <a (click)="sidenav.toggle()" (click)="choose(3)" mat-list-item>Longest Chain Visualization</a>
+      <a (click)="sidenav.toggle()" (click)="choose(4)" mat-list-item>Generate Chain</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill>
+    <div class="separator-30"></div>
+    <ng-container *ngIf="selector == 0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <span class="gradient-welcome"> Welcome </span>
+          </div>
+          <div class="separator-30"></div>
+          <div class="col-2 inline-block"></div>
+          <div class="col-8 inline-block">
+            <p>
+              This App will work on approaching the Collatz Sequence problem.
+              The sequence can be defined as follows:
+              Given a starting number, a chain will be created by applying the following formula on the numbers
+              iteratively.
+              If n is even, n will be divided by 2. Otherwise, it will be multiplied by 3 and then incremented by 1.
+              <br><br>
+              Please head to the menu button next to the header and pick one of the options. <br><br>
+              Brute Force and Memoization are two approaches to finding the number under 1 million that will produce the
+              longest chain.
+              Each page explains the approach followed in solving the problem and outputs the results obtained by the
+              approach. <br><br>
+              Longest Chain Visualization option will show you the longest chain that starts with a number under 1
+              million. <br><br>
+              Generate Chain will generate and visualize a chain created by the number you input.
+              Homepage will redirect you to this screen.
+              Have Fun!
+            </p>
+          </div>
+          <div class="col-2 inline-block">
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="selector == 1">
+      <app-brute-force></app-brute-force>
+    </ng-container>
+    <ng-container *ngIf="selector == 2">
+      <app-memoization></app-memoization>
+    </ng-container>
+    <ng-container *ngIf="selector == 3">
+      <app-visualize></app-visualize>
+    </ng-container>
+    <ng-container *ngIf="selector == 4">
+      <app-calculate></app-calculate>
+    </ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

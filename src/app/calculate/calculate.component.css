@@ -1,0 +1,24 @@
+
+.mat-slider {
+    width: 300px;
+  }
+  ::ng-deep .mat-slider-thumb{
+    background-color: black!important;
+}
+::ng-deep .mat-slider-track-fill{
+    background-color: black!important;
+}
+
+
+.slider{
+    width: 80%!important;
+}
+.border-radius {
+    border-radius: 5px
+}
+.chart{
+    height: 100%;
+     width: 100%; 
+     margin-left:auto;
+     margin-right:auto;
+}

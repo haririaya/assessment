@@ -1,0 +1,21 @@
+
+.mat-toolbar-row, .mat-toolbar-single-row.headerToolbar {
+	background-color: #0C2A49!important;
+	height: 60px;
+}
+.white { 
+    color: white; 
+}
+.menu-spacer {
+  flex: 1 1 auto;
+}
+.gradient-welcome{
+  font-size: 72px;
+  background: -webkit-linear-gradient(#34495E, #93C7FC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mat-drawer ::ng-deep {
+  height: 80%;
+}
+

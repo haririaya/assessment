@@ -1,0 +1,21 @@
+<div class="bordered">
+    <div>
+        <table class="table tableBorder">
+            <thead>
+                <tr>
+                    <th scope="col">{{head}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pl-2 highlight" [ngClass]="{'highlightHover':(related === row['show'] && related !== '')}"
+                    (mouseover)="mouseOver(row['related'])" *ngFor="let row of data">
+                    <td> {{row['show']}}</td>
+
+                </tr>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

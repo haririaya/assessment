@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8 inline-block">
+            Select your method of visualization to see the longest chain generated from the point 837799. 
+        </div>
+        <div class="col-4 inline-block">
+            <mat-form-field appearance="fill">
+                <mat-label>Choose an option</mat-label>
+                <select matNativeControl (change)="selectChart($event)">
+                    <option *ngFor="let type of types; let index = index" [value]="index">
+                        {{type}}
+                    </option>
+                </select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="separator-30"></div>
+    <div class="row">
+        <div class="col-1 inline-block"></div>
+        <div class="col-10 inline-block">
+            <div id="chartContainer" class="chart"></div>
+        </div>
+        <div class="col-1 inline-block"></div>
+    </div>
+</div>

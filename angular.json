@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/material-design-icons/iconfont/material-icons.css",
+              "src/styles.css"              
             ],
-            "scripts": []
+            "scripts":  [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/canvasjs/dist/canvasjs.min.js"
+            ]
           },
           "configurations": {
             "production": {

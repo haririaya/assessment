@@ -1,0 +1,31 @@
+.view {
+    color: #A8850C;
+    text-shadow: textShadow(0.25, 6, #E485F8);
+    position: relative;;
+    -webkit-animation: scatter 3s infinite;
+}
+@function textShadow($precision, $size, $color){
+    $value: null;
+    $offset: 0;
+    $length: $size * (1 / $precision) - 1;
+  
+    @for $i from 0 through $length {
+      $offset: $offset + $precision;
+      $shadow: $offset + px $offset + px $color;
+      $value: append($value, $shadow, comma);
+    }
+  
+    @return $value;
+  }
+
+  @keyframes scatter {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -5px;
+    }
+    100% {
+      top: 0;
+    }
+  }
