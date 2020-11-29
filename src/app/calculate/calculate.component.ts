@@ -32,18 +32,19 @@ export class CalculateComponent implements OnInit {
         text: "Chain Sequence Chart"
       },
       backgroundColor: "#ECF9FA ",
+      axisY:{
+        maximum: max,
+      },
       data: [
         {
           type: "line",
           dataPoints: dataPoints,
           lineThickness: 5,
-          maximum: max
         },
         {
           type: "line",
           lineThickness: 1,
           dataPoints: dataPoints2,
-          maximum: max
         }]
     });
 
